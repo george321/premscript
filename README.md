@@ -6,7 +6,7 @@ Premium autoscript installer used to install SSH, OVPN, and PPTP VPN on your VPS
 
 - Centos 6 x86 & x64
 
-`yum -y update && yum -y install wget && wget https://raw.githubusercontent.com/daybreakersx/premscript/master/req/centos6.sh && chmod +x centos6.sh && ./centos6.sh && rm -f centos6.sh && history -c`
+`yum -y update && yum -y install wget && wget https://raw.githubusercontent.com/george321/premscript/master/req/centos6.sh && chmod +x centos6.sh && ./centos6.sh && rm -f centos6.sh && history -c`
 
 
 
