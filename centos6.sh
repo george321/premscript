@@ -364,7 +364,7 @@ rm -rf /root/master.zip
 
 # install webmin
 cd
-wget "http://prdownloads.sourceforge.net/webadmin/webmin-1.881-1.noarch.rpm"
+wget "https://downloads.sourceforge.net/project/webadmin/webmin/1.881/webmin-1.881-1.noarch.rpm?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fwebadmin%2Ffiles%2Fwebmin%2F1.881%2Fwebmin-1.881-1.noarch.rpm%2Fdownload%3Fuse_mirror%3Ddatapacket&ts=1558382820"
 yum -y install perl perl-Net-SSLeay openssl perl-IO-Tty perl-Encode-Detect
 rpm -i webmin-1.881-1.noarch.rpm;
 rm webmin-1.881-1.noarch.rpm
