@@ -82,7 +82,7 @@ service vnstat restart
 
 # install screenfetch
 cd
-wget -O /usr/bin/screenfetch "https://raw.githubusercontent.com/daybreakersx/premscript/master/screenfetch"
+wget -O /usr/bin/screenfetch "https://raw.githubusercontent.com/george321/premscript/master/screenfetch"
 chmod +x /usr/bin/screenfetch
 echo "clear" >> .profile
 echo "screenfetch" >> .profile
@@ -307,17 +307,17 @@ mkdir /var/lib/premium-script
 /etc/init.d/pptpd restart
 
 # install badvpn
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/daybreakersx/premscript/master/badvpn-udpgw"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/george321/premscript/master/badvpn-udpgw"
 if [ "$OS" == "x86_64" ]; then
-  wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/daybreakersx/premscript/master/badvpn-udpgw64"
+  wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/george321/premscript/master/badvpn-udpgw64"
 fi
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.local
 chmod +x /usr/bin/badvpn-udpgw
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
 
 # install mrtg
-wget -O /etc/snmp/snmpd.conf "https://raw.githubusercontent.com/daybreakersx/premscript/master/snmpd.conf"
-wget -O /root/mrtg-mem.sh "https://raw.githubusercontent.com/daybreakersx/premscript/master/mrtg-mem.sh"
+wget -O /etc/snmp/snmpd.conf "https://raw.githubusercontent.com/george321/premscript/master/snmpd.conf"
+wget -O /root/mrtg-mem.sh "https://raw.githubusercontent.com/george321/premscript/master/mrtg-mem.sh"
 chmod +x /root/mrtg-mem.sh
 cd /etc/snmp/
 sed -i 's/TRAPDRUN=no/TRAPDRUN=yes/g' /etc/default/snmpd
@@ -352,7 +352,7 @@ service dropbear restart
 #Upgrade to Dropbear 2018
 cd
 apt-get install zlib1g-dev
-wget https://raw.githubusercontent.com/daybreakersx/premscript/master/dropbear-2018.76.tar.bz2
+wget https://raw.githubusercontent.com/george321/premscript/master/dropbear-2018.76.tar.bz2
 bzip2 -cd dropbear-2018.76.tar.bz2 | tar xvf -
 cd dropbear-2018.76
 ./configure
@@ -364,7 +364,7 @@ service dropbear restart
 
 # install vnstat gui
 cd /home/vps/public_html/
-wget https://raw.githubusercontent.com/daybreakersx/premscript/master/vnstat_php_frontend-1.5.1.tar.gz
+wget https://raw.githubusercontent.com/george321/premscript/master/vnstat_php_frontend-1.5.1.tar.gz
 tar xf vnstat_php_frontend-1.5.1.tar.gz
 rm vnstat_php_frontend-1.5.1.tar.gz
 mv vnstat_php_frontend-1.5.1 vnstat
@@ -487,7 +487,7 @@ service dropbear restart
 
 # download premium script
 cd
-wget https://raw.githubusercontent.com/daybreakersx/premscript/master/updates/install-premiumscript.sh -O - -o /dev/null|sh
+wget https://raw.githubusercontent.com/george321/premscript/master/updates/install-premiumscript.sh -O - -o /dev/null|sh
 
 # finalizing
 apt-get -y autoremove
